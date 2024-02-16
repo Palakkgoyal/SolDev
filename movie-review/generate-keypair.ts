@@ -6,13 +6,15 @@
 // console.log(`The keypair is`, keypair);
 // console.log(`✅ Finished!`);
 
+// 3BwqcHSXwCfbkDLcq9iULwFvywtJAPp87UYK5qtBAh4Q
+
 import "dotenv/config";
 import { getKeypairFromEnvironment } from "@solana-developers/helpers";
 
 const keypair = getKeypairFromEnvironment("SECRET_KEY");
 
 console.log(
-    `✅ Finished, We've loaded our secret key securely, using an env file!`
+    `✅ Finished, We've loaded our secret key securely, using an env file!`, keypair.publicKey.toBase58()
 )
 console.log(
     `The keypair is:`, keypair
