@@ -15,8 +15,8 @@ function getPublicKey() {
 }
 
 
-const connection = new Connection(clusterApiUrl("mainnet-beta"));
-// const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+// const connection = new Connection(clusterApiUrl("mainnet-beta"));
+const connection = new Connection("https://api.devnet.solana.com", "confirmed");
 const publicKey = getPublicKey();
 const balanceInLamports = await connection.getBalance(publicKey);
 const balanceInSol = balanceInLamports / LAMPORTS_PER_SOL;
